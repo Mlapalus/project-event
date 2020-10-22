@@ -1,0 +1,17 @@
+{
+    "name": "event/event",
+    "authors": [
+        {
+            "name": "mlapalus",
+            "email": "mlapalus@yahoo.fr"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "phpspec/phpspec": "^6.2",
+        "spatie/phpunit-watcher": "^1.22",
+        "symfony/var-dumper": "^5.1"
+    }
+}
