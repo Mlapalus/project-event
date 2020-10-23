@@ -1,5 +1,6 @@
 <?php
-
+use Core\Entity\Post;
+use Core\Usecase\CreatePost;
 use PHPUnit\Framework\TestCase;
 
 // Verify the use of PHPUnit
@@ -20,6 +21,6 @@ class CreatePostTest extends TestCase
     );
 
     //Test if $post if a instance of POST
-    
+    $this->assertInstanceOf(Post::class, $post);
   }
 } 

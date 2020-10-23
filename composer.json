@@ -13,5 +13,10 @@
         "phpspec/phpspec": "^6.2",
         "spatie/phpunit-watcher": "^1.22",
         "symfony/var-dumper": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/src/"
+        }
     }
 }

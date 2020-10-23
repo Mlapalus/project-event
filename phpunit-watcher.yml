@@ -1,3 +1,4 @@
+hideManual: true
 watch:
   directories:
     - core
