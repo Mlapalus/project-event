@@ -19,8 +19,7 @@ class Post
   {
     $this->title = $title;
     $this->content = $content;
-    $this->publishedAt = $createdAt;
+    $this->createdAt = $createdAt;
     $this->uuid = $uuid ?? uniqid();
-    
   }
 }

@@ -30,7 +30,9 @@ class FeatureContext implements Context
         $this->user = new User();
         $this->post = new Post(
             'Mon titre',
-            'Mon contenu'
+            'Mon contenu',
+            new DateTime('2020-10-10'),
+            "azerty"
         );
     }
     /**
@@ -60,7 +62,10 @@ class FeatureContext implements Context
      */
     public function thePostIsStockedInTheRepository()
     {
-        throw new PendingException();
+        $content = $this->post->content;
+        $post = $this->user->readPost($content);
+
+        \PHPUnit\Framework\Assert::assertEquals($this->post, $post);
     }
 
     /**

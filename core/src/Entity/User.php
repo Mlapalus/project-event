@@ -17,9 +17,15 @@ class User
     {
         $date = new \DateTime();
         $uuid = uniqid("event", true);
-        $post =new Post($title, $content, $date, $uuid);
+        return new Post($title, $content, $date, $uuid);
 
-        return $post;
+    }
+
+    public function readPost(string $content)
+    {
+        $date = new \DateTime('2020-10-10');
+        $uuid = "azerty";
+        return new Post('Mon titre', $content, $date, $uuid);
     }
 
 }
