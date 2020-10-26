@@ -4,6 +4,7 @@ namespace Core\Usecase;
 
 use Core\Entity\Post;
 
+// Create a Post with a data array
 class CreatePost {
     public function execute(array $postData): ?Post {
 

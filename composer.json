@@ -12,7 +12,8 @@
         "phpunit/phpunit": "^9",
         "phpspec/phpspec": "^6.2",
         "spatie/phpunit-watcher": "^1.22",
-        "symfony/var-dumper": "^5.1"
+        "symfony/var-dumper": "^5.1",
+        "behat/behat": "^3.7"
     },
     "autoload": {
         "psr-4": {
