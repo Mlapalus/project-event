@@ -5,9 +5,7 @@ Feature: Posts Utilisation
 
   Scenario: Creating a new Post
     Given I'm a user of the Application
-    When I want add a new hashed Post
-    And I put a Title for the Post
-    And I put a Content for the Post
+    When I want add a new Post
     Then The Post is stocked in the Repository
 
   Scenario: Read a valid Post

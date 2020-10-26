@@ -6,6 +6,7 @@ use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 
 use Core\Entity\User;
+use Core\Entity\Post;
 
 
 /**
@@ -22,10 +23,15 @@ class FeatureContext implements Context
      */
 
     private $user;
+    private $post;
 
     public function __construct()
     {
         $this->user = new User();
+        $this->post = new Post(
+            'Mon titre',
+            'Mon contenu'
+        );
     }
     /**
      * @Given I'm a user of the Application
@@ -39,27 +45,14 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When I want add a new hashed Post
+     * @When I want add a new Post
      */
-    public function iWantAddANewHashedPost()
+    public function iWantAddANewPost()
     {
-        throw new PendingException();
-    }
 
-    /**
-     * @When I put a Title for the Post
-     */
-    public function iPutATitleForThePost()
-    {
-        throw new PendingException();
-    }
+        $post = $this->user->createPost($this->post->title, $this->post->content);
 
-    /**
-     * @When I put a Content for the Post
-     */
-    public function iPutAContentForThePost()
-    {
-        throw new PendingException();
+        \PHPUnit\Framework\Assert::assertInstanceOf(Post::class, $post);
     }
 
     /**
